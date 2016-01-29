@@ -1,20 +1,21 @@
+<!-- This document has been edited to reflect the use of "controller as" syntax -->
 <html>
 	<head> 
 		<title>Angular JS Controllers, Thinkster Tutorial </title>
 		   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
 		<!-- Import the angular controller code. -->
-		<script type="text/javascript" src="app.js"></script>
+		<script type="text/javascript" src="app2.js"></script>
 	</head>
 	<body>
 		<div ng-app="app">
 			<h2>Controllers</h2>
-			<div ng-controller="MainController">
-				<p>{{message}}</p>
+			<div ng-controller="MainController as main">
+				<p>{{main.message}}</p>
 				<!-- This is the value of the $scope.message in app.js -->
 	
-				<form ng-submit="updateMessage(newMessage)">
+				<form ng-submit="main.updateMessage(main.newMessage)">
 				<!-- On form submission, invoke the updateMessage() in app.js -->
-				<input type="text" ng-model="newMessage">
+				<input type="text" ng-model="main.newMessage">
 				<button type="submit"> Update Message</button>
 					
 				</form>
