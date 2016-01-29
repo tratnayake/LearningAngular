@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AngularJS Controllers (Angularjs.org tut)</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+  <body>
+  	<div ng-app="app">
+  	<!-- Import, this ng-app="XXXX" value must match the angular.module('XXX') value to work -->
+		<div ng-controller="SpicyController">
+			<button ng-click="chiliSpicy()">Chili</button>
+			<button ng-click="jalapenoSpicy()">Jalepeno</button>
+			<p>The food is {{spice}} spicy!</p>
+			<!-- The {{spice}} value is default set to "very" but as the user clicks
+			Chili or Jalepeno, the valuew ill change to either Chili or Jalepeno spicy -->
+		</div>
+	</div>
+  </body>
+</html>
